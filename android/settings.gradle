@@ -1,0 +1,3 @@
+rootProject.name = 'ProjectWithNewModule'
+
+include ':app'
