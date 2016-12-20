@@ -27,26 +27,46 @@ export default class ProjectWithNewModule extends Component {
     imageDataProcessed: null
   };
 
-  processImageToGrey(imageData) {
-        CalendarManager.processImageToGrey(
-            imageData,
-            //errorCallback
-            (results) => {
-                alert('Error: ' + results[0]);
-            },
-            // successCallback
-            (results) => {
-              console.log('Results data: ', results);
-              // getting uri of processed file from native module
-              var resultsImage = {'uri': results};
+  // processImageToGrey(imageData) {
+  //       CalendarManager.processImageToGrey(
+  //           imageData,
+  //           //errorCallback
+  //           (results) => {
+  //               alert('Error: ' + results[0]);
+  //           },
+  //           // successCallback
+  //           (results) => {
+  //             console.log('Results data: ', results);
+  //             // getting uri of processed file from native module
+  //             var resultsImage = {'uri': results};
+  //
+  //             // Update the state of the view
+  //             this.setState({
+  //                 imageDataProcessed : resultsImage
+  //             });
+  //           }
+  //       );
+  //   }
 
-              // Update the state of the view
-              this.setState({
-                  imageDataProcessed : resultsImage
-              });
-            }
-        );
-    }
+processImageDetectPellets(imageData) {
+    CalendarManager.detectPelletsOnImage(
+      imageData,
+      //errorCallback
+      (results) => {
+        alert('Error: ' + results[0]);
+      },
+      // successCallback
+      (results) => {
+        console.log('Results data: ', results);
+        // getting uri of processed file from native module
+        var resultsImage = {'uri': results[1]};
+        // Update the state of the view
+        this.setState({
+            imageDataProcessed : resultsImage
+        });
+      }
+    );
+}
 
   selectPhotoTapped() {
     const options = {
@@ -78,7 +98,7 @@ export default class ProjectWithNewModule extends Component {
           imageData: response
         })
         //passing image data for processing
-        this.processImageToGrey(response);
+        this.processImageDetectPellets(response);
       }
     });
   }
@@ -113,7 +133,7 @@ export default class ProjectWithNewModule extends Component {
           </View>
         </TouchableOpacity>
         <Text style={styles.welcome}>
-          Processed image:
+          Image processed with Pellet detector:
         </Text>
 
         <View style={[styles.avatar, styles.avatarContainer, {marginBottom: 20}]}>

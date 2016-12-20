@@ -25,6 +25,8 @@
 		5D28BB7996904C9081557D12 /* libRNImagePicker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 496E065BD3854CC99E85057B /* libRNImagePicker.a */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
+		8C11BD241E096BA900F1DA5C /* UIImage+OpenCV.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8C11BD231E096BA900F1DA5C /* UIImage+OpenCV.mm */; };
+		8C11BD251E096C5600F1DA5C /* libPelletDetector.a in Resources */ = {isa = PBXBuildFile; fileRef = 8CE68D2B1E095BBF0085E730 /* libPelletDetector.a */; };
 		8CE68C681E07F2A70085E730 /* CalendarManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8CE68C671E07F2A70085E730 /* CalendarManager.mm */; };
 		8CE68C941E0816C50085E730 /* FrameworksProxy.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8CE68C931E0816C50085E730 /* FrameworksProxy.mm */; };
 		8CE68C961E0818C50085E730 /* opencv2.framework in Resources */ = {isa = PBXBuildFile; fileRef = 8CE68C951E0818C50085E730 /* opencv2.framework */; };
@@ -32,7 +34,6 @@
 		8CE68C991E081A220085E730 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CE68C981E081A220085E730 /* CoreGraphics.framework */; };
 		8CE68C9B1E081AB20085E730 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CE68C9A1E081AB20085E730 /* AssetsLibrary.framework */; };
 		8CE68D2C1E095BBF0085E730 /* libPelletDetector.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CE68D2B1E095BBF0085E730 /* libPelletDetector.a */; };
-		8CE68D2D1E095BD00085E730 /* PelletDetector in Resources */ = {isa = PBXBuildFile; fileRef = 8CE68D291E095B980085E730 /* PelletDetector */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -209,6 +210,10 @@
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
+		8C11BD211E096BA900F1DA5C /* OpenCVHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OpenCVHeader.h; path = ProjectWithNewModule/Helpers/OpenCVHeader.h; sourceTree = "<group>"; };
+		8C11BD221E096BA900F1DA5C /* UIImage+OpenCV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+OpenCV.h"; path = "ProjectWithNewModule/Helpers/UIImage+OpenCV.h"; sourceTree = "<group>"; };
+		8C11BD231E096BA900F1DA5C /* UIImage+OpenCV.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = "UIImage+OpenCV.mm"; path = "ProjectWithNewModule/Helpers/UIImage+OpenCV.mm"; sourceTree = "<group>"; };
+		8C11BD271E096C8400F1DA5C /* PelletDetector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PelletDetector.h; path = ProjectWithNewModule/Frameworks/PelletDetector/PelletDetector.h; sourceTree = "<group>"; };
 		8CE68C661E07F2A70085E730 /* CalendarManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CalendarManager.h; path = ProjectWithNewModule/CalendarManager.h; sourceTree = "<group>"; };
 		8CE68C671E07F2A70085E730 /* CalendarManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = CalendarManager.mm; path = ProjectWithNewModule/CalendarManager.mm; sourceTree = "<group>"; };
 		8CE68C921E0816C50085E730 /* FrameworksProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FrameworksProxy.h; path = ProjectWithNewModule/FrameworksProxy.h; sourceTree = "<group>"; };
@@ -216,7 +221,6 @@
 		8CE68C951E0818C50085E730 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = ProjectWithNewModule/Frameworks/opencv2.framework; sourceTree = "<group>"; };
 		8CE68C981E081A220085E730 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		8CE68C9A1E081AB20085E730 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
-		8CE68D291E095B980085E730 /* PelletDetector */ = {isa = PBXFileReference; lastKnownFileType = folder; name = PelletDetector; path = ProjectWithNewModule/Frameworks/PelletDetector; sourceTree = "<group>"; };
 		8CE68D2B1E095BBF0085E730 /* libPelletDetector.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPelletDetector.a; path = ProjectWithNewModule/Frameworks/PelletDetector/libPelletDetector.a; sourceTree = "<group>"; };
 		C630655BF6224E9D984E6A27 /* RNImagePicker.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNImagePicker.xcodeproj; path = "../node_modules/react-native-image-picker/ios/RNImagePicker.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -347,6 +351,8 @@
 				8CE68C671E07F2A70085E730 /* CalendarManager.mm */,
 				8CE68C921E0816C50085E730 /* FrameworksProxy.h */,
 				8CE68C931E0816C50085E730 /* FrameworksProxy.mm */,
+				8C11BD261E096C6F00F1DA5C /* PelletDetector */,
+				8C11BD201E096B9B00F1DA5C /* Helpers */,
 			);
 			name = ProjectWithNewModule;
 			sourceTree = "<group>";
@@ -428,11 +434,28 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		8C11BD201E096B9B00F1DA5C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				8C11BD211E096BA900F1DA5C /* OpenCVHeader.h */,
+				8C11BD221E096BA900F1DA5C /* UIImage+OpenCV.h */,
+				8C11BD231E096BA900F1DA5C /* UIImage+OpenCV.mm */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		8C11BD261E096C6F00F1DA5C /* PelletDetector */ = {
+			isa = PBXGroup;
+			children = (
+				8C11BD271E096C8400F1DA5C /* PelletDetector.h */,
+			);
+			name = PelletDetector;
+			sourceTree = "<group>";
+		};
 		8CE68C8A1E0811BB0085E730 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				8CE68D2B1E095BBF0085E730 /* libPelletDetector.a */,
-				8CE68D291E095B980085E730 /* PelletDetector */,
 				8CE68C9A1E081AB20085E730 /* AssetsLibrary.framework */,
 				8CE68C981E081A220085E730 /* CoreGraphics.framework */,
 				8CE68C951E0818C50085E730 /* opencv2.framework */,
@@ -726,7 +749,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8CE68D2D1E095BD00085E730 /* PelletDetector in Resources */,
+				8C11BD251E096C5600F1DA5C /* libPelletDetector.a in Resources */,
 				8CE68C961E0818C50085E730 /* opencv2.framework in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
@@ -769,6 +792,7 @@
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 				8CE68C681E07F2A70085E730 /* CalendarManager.mm in Sources */,
 				8CE68C941E0816C50085E730 /* FrameworksProxy.mm in Sources */,
+				8C11BD241E096BA900F1DA5C /* UIImage+OpenCV.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
